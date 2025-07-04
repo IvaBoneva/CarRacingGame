@@ -17,8 +17,12 @@ namespace CarRacingGame
         {
             moveLines(gameSpeed);
             moveEnemies(gameSpeed);
+            moveCoins(gameSpeed);
             gameOver();
+            collectCoins(); 
         }
+
+        int collectedCoins = 0;
 
         Random r = new Random();
         int x, y;
@@ -40,6 +44,28 @@ namespace CarRacingGame
                     enemies[i].Location = new Point(x, 0);
                 }
                 else enemies[i].Top += speed;
+            }
+        }
+
+        void moveCoins(int speed)
+        {
+            PictureBox[] coins = { coin1, coin2, coin3, coin4 };
+
+            for (int i = 0; i < coins.Length; i++)
+            {
+                if (coins[i].Top >= 500)
+                {
+                    if (i == 0 || i == 1)
+                    {
+                        x = r.Next(20, 120);
+                    }
+                    else
+                    {
+                        x = r.Next(160, 320);
+                    }
+                    coins[i].Location = new Point(x, 0);
+                }
+                else coins[i].Top += speed;
             }
         }
 
@@ -71,7 +97,30 @@ namespace CarRacingGame
 
             private void car_Click(object sender, EventArgs e)
             {
+                 
+            }
 
+            void collectCoins()
+            {
+            PictureBox[] coins = { coin1, coin2, coin3, coin4 };
+
+            for (int i = 0; i < coins.Length; i++)
+                {
+                    if (car.Bounds.IntersectsWith(coins[i].Bounds))
+                    {
+                        collectedCoins++;
+                        score.Text = "Coins = "+collectedCoins.ToString();
+                        if (i == 0 || i == 1)
+                        {
+                            x = r.Next(20, 120);
+                        }
+                        else
+                        {
+                            x = r.Next(160, 320);
+                        }
+                        coins[i].Location = new Point(x, 0);
+                    }
+                }
             }
 
             int gameSpeed = 0;

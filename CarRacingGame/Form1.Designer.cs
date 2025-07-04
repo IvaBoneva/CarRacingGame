@@ -42,6 +42,11 @@
             enemy2 = new PictureBox();
             enemy3 = new PictureBox();
             over = new Label();
+            coin1 = new PictureBox();
+            coin2 = new PictureBox();
+            coin3 = new PictureBox();
+            coin4 = new PictureBox();
+            score = new Label();
             ((System.ComponentModel.ISupportInitialize)line1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line3).BeginInit();
@@ -52,6 +57,10 @@
             ((System.ComponentModel.ISupportInitialize)enemy1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)enemy2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)enemy3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)coin1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)coin2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)coin3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)coin4).BeginInit();
             SuspendLayout();
             // 
             // line1
@@ -165,11 +174,66 @@
             over.BackColor = Color.Yellow;
             over.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 204);
             over.ForeColor = Color.Red;
-            over.Location = new Point(94, 129);
+            over.Location = new Point(95, 115);
             over.Name = "over";
             over.Size = new Size(200, 39);
             over.TabIndex = 10;
             over.Text = "Game Over";
+            // 
+            // coin1
+            // 
+            coin1.BackColor = Color.Transparent;
+            coin1.Image = (Image)resources.GetObject("coin1.Image");
+            coin1.Location = new Point(95, 204);
+            coin1.Name = "coin1";
+            coin1.Size = new Size(20, 20);
+            coin1.SizeMode = PictureBoxSizeMode.StretchImage;
+            coin1.TabIndex = 11;
+            coin1.TabStop = false;
+            // 
+            // coin2
+            // 
+            coin2.BackColor = Color.Transparent;
+            coin2.Image = (Image)resources.GetObject("coin2.Image");
+            coin2.Location = new Point(95, 32);
+            coin2.Name = "coin2";
+            coin2.Size = new Size(20, 20);
+            coin2.SizeMode = PictureBoxSizeMode.StretchImage;
+            coin2.TabIndex = 12;
+            coin2.TabStop = false;
+            // 
+            // coin3
+            // 
+            coin3.BackColor = Color.Transparent;
+            coin3.Image = (Image)resources.GetObject("coin3.Image");
+            coin3.Location = new Point(321, 268);
+            coin3.Name = "coin3";
+            coin3.Size = new Size(20, 20);
+            coin3.SizeMode = PictureBoxSizeMode.StretchImage;
+            coin3.TabIndex = 13;
+            coin3.TabStop = false;
+            // 
+            // coin4
+            // 
+            coin4.BackColor = Color.Transparent;
+            coin4.Image = (Image)resources.GetObject("coin4.Image");
+            coin4.Location = new Point(312, 74);
+            coin4.Name = "coin4";
+            coin4.Size = new Size(20, 20);
+            coin4.SizeMode = PictureBoxSizeMode.StretchImage;
+            coin4.TabIndex = 14;
+            coin4.TabStop = false;
+            // 
+            // score
+            // 
+            score.AutoSize = true;
+            score.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            score.ForeColor = Color.Yellow;
+            score.Location = new Point(10, -1);
+            score.Name = "score";
+            score.Size = new Size(105, 25);
+            score.TabIndex = 15;
+            score.Text = "Coins = 0";
             // 
             // Form1
             // 
@@ -177,6 +241,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(382, 453);
+            Controls.Add(score);
+            Controls.Add(coin4);
+            Controls.Add(coin3);
+            Controls.Add(coin2);
+            Controls.Add(coin1);
             Controls.Add(over);
             Controls.Add(enemy3);
             Controls.Add(enemy2);
@@ -202,6 +271,10 @@
             ((System.ComponentModel.ISupportInitialize)enemy1).EndInit();
             ((System.ComponentModel.ISupportInitialize)enemy2).EndInit();
             ((System.ComponentModel.ISupportInitialize)enemy3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)coin1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)coin2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)coin3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)coin4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -220,5 +293,10 @@
         private PictureBox enemy2;
         private PictureBox enemy3;
         private Label over;
+        private PictureBox coin1;
+        private PictureBox coin2;
+        private PictureBox coin3;
+        private PictureBox coin4;
+        private Label score;
     }
 }
