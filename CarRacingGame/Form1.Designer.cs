@@ -109,10 +109,11 @@
             // 
             // car
             // 
+            car.BackColor = Color.Transparent;
             car.Image = (Image)resources.GetObject("car.Image");
             car.Location = new Point(46, 281);
             car.Name = "car";
-            car.Size = new Size(84, 78);
+            car.Size = new Size(45, 78);
             car.SizeMode = PictureBoxSizeMode.StretchImage;
             car.TabIndex = 6;
             car.TabStop = false;

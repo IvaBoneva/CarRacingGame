@@ -34,15 +34,24 @@ namespace CarRacingGame
 
         }
 
+        int gameSpeed = 0;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Left)
             {
-                car.Left += -8;
+                if (car.Left > 20) car.Left += - gameSpeed;
             }
-            if (e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.Right)
             {
-                car.Left += 8;
+                if (car.Left < 320) car.Left += gameSpeed;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                if (gameSpeed < 21) gameSpeed++;
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                if (gameSpeed > 0) gameSpeed--;
             }
         }
     }
