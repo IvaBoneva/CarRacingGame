@@ -41,6 +41,7 @@
             enemy1 = new PictureBox();
             enemy2 = new PictureBox();
             enemy3 = new PictureBox();
+            over = new Label();
             ((System.ComponentModel.ISupportInitialize)line1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line3).BeginInit();
@@ -158,12 +159,25 @@
             enemy3.TabIndex = 9;
             enemy3.TabStop = false;
             // 
+            // over
+            // 
+            over.AutoSize = true;
+            over.BackColor = Color.Yellow;
+            over.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            over.ForeColor = Color.Red;
+            over.Location = new Point(94, 129);
+            over.Name = "over";
+            over.Size = new Size(200, 39);
+            over.TabIndex = 10;
+            over.Text = "Game Over";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(382, 453);
+            Controls.Add(over);
             Controls.Add(enemy3);
             Controls.Add(enemy2);
             Controls.Add(enemy1);
@@ -189,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)enemy2).EndInit();
             ((System.ComponentModel.ISupportInitialize)enemy3).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -204,5 +219,6 @@
         private PictureBox enemy1;
         private PictureBox enemy2;
         private PictureBox enemy3;
+        private Label over;
     }
 }
