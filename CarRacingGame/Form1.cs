@@ -14,7 +14,20 @@ namespace CarRacingGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            moveLines(5);
+            moveLines(gameSpeed);
+            moveEnemies(gameSpeed);
+        }
+
+        void moveEnemies(int speed)
+        {
+            PictureBox[] enemies = { enemy1, enemy2, enemy3};
+
+
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                if (enemies[i].Top >= 500) enemies[i].Top = 0;
+                else enemies[i].Top += speed;
+            }
         }
 
         void moveLines(int speed)

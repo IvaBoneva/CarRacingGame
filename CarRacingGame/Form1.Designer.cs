@@ -38,6 +38,9 @@
             line6 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             car = new PictureBox();
+            enemy1 = new PictureBox();
+            enemy2 = new PictureBox();
+            enemy3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)line1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line3).BeginInit();
@@ -45,6 +48,9 @@
             ((System.ComponentModel.ISupportInitialize)line5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)line6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)car).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)enemy1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)enemy2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)enemy3).BeginInit();
             SuspendLayout();
             // 
             // line1
@@ -113,11 +119,44 @@
             car.Image = (Image)resources.GetObject("car.Image");
             car.Location = new Point(46, 281);
             car.Name = "car";
-            car.Size = new Size(45, 78);
+            car.Size = new Size(46, 71);
             car.SizeMode = PictureBoxSizeMode.StretchImage;
             car.TabIndex = 6;
             car.TabStop = false;
             car.Click += car_Click;
+            // 
+            // enemy1
+            // 
+            enemy1.BackColor = Color.Transparent;
+            enemy1.Image = (Image)resources.GetObject("enemy1.Image");
+            enemy1.Location = new Point(31, 103);
+            enemy1.Name = "enemy1";
+            enemy1.Size = new Size(45, 65);
+            enemy1.SizeMode = PictureBoxSizeMode.StretchImage;
+            enemy1.TabIndex = 7;
+            enemy1.TabStop = false;
+            // 
+            // enemy2
+            // 
+            enemy2.BackColor = Color.Transparent;
+            enemy2.Image = (Image)resources.GetObject("enemy2.Image");
+            enemy2.Location = new Point(238, 46);
+            enemy2.Name = "enemy2";
+            enemy2.Size = new Size(45, 65);
+            enemy2.SizeMode = PictureBoxSizeMode.StretchImage;
+            enemy2.TabIndex = 8;
+            enemy2.TabStop = false;
+            // 
+            // enemy3
+            // 
+            enemy3.BackColor = Color.Transparent;
+            enemy3.Image = (Image)resources.GetObject("enemy3.Image");
+            enemy3.Location = new Point(312, 171);
+            enemy3.Name = "enemy3";
+            enemy3.Size = new Size(45, 65);
+            enemy3.SizeMode = PictureBoxSizeMode.StretchImage;
+            enemy3.TabIndex = 9;
+            enemy3.TabStop = false;
             // 
             // Form1
             // 
@@ -125,6 +164,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(382, 453);
+            Controls.Add(enemy3);
+            Controls.Add(enemy2);
+            Controls.Add(enemy1);
             Controls.Add(car);
             Controls.Add(line6);
             Controls.Add(line5);
@@ -143,6 +185,9 @@
             ((System.ComponentModel.ISupportInitialize)line5).EndInit();
             ((System.ComponentModel.ISupportInitialize)line6).EndInit();
             ((System.ComponentModel.ISupportInitialize)car).EndInit();
+            ((System.ComponentModel.ISupportInitialize)enemy1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)enemy2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)enemy3).EndInit();
             ResumeLayout(false);
         }
 
@@ -156,5 +201,8 @@
         private PictureBox line6;
         private System.Windows.Forms.Timer timer1;
         private PictureBox car;
+        private PictureBox enemy1;
+        private PictureBox enemy2;
+        private PictureBox enemy3;
     }
 }
